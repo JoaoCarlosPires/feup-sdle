@@ -7,6 +7,6 @@ These projects were created during the **1st semester** of the **1st year** of t
 ## Team
 
 - João Pires
-- Tomás Gonçalves
-- Pedro Azevedo
-- Marcelo Reis
+- João Romão
+- Rafael Cristino
+- Xavier Pisco
