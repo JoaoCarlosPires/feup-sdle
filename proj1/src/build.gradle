@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation "org.zeromq:jeromq:0.5.2"
+}
+
+test {
+    useJUnitPlatform()
+}
+
+// gradle run -Pfile=Subscriber --args="(...)"
+task run(type: JavaExec) {
+    if (project.hasProperty("file")) {
+        group = "Execution"
+        classpath = sourceSets.main.runtimeClasspath
+        main = project.getProperty("file")
+    }
+}
